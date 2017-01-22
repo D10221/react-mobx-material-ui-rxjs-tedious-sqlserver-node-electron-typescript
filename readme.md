@@ -17,5 +17,5 @@ alternatively, point to the cdn , and add it to index.html/main-window.html.
 #### .vscode
 
 Launch It's windows based configuration.  
-and includes mocha, electron-mai, electron-renderer, attach-to-chrome, launch chrome with "temp profile".
+and includes mocha, electron-main, electron-renderer, attach-to-chrome, launch chrome with "temp profile".
   
