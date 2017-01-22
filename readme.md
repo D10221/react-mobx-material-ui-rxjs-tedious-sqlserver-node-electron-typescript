@@ -18,4 +18,4 @@ alternatively, point to the cdn , and add it to index.html/main-window.html.
 
 Launch It's windows based configuration.  
 and includes mocha, electron-main, electron-renderer, attach-to-chrome, launch chrome with "temp profile".
-  
+Edit "/.vscode/chrome.cmd" to point it to where you want to have the temp profile from.
