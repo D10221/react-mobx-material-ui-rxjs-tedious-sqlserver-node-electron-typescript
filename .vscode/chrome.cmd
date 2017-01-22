@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -remote-debugging-port=9222 "--user-data-dir=%USERPROFILE%/.tmp/remote-profile"  -disk-cache-size=1 -media-cache=1 http://localhost:8080"

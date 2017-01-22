@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/main.js",
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "ELECTRON-MAIN",
+            "program": "${workspaceRoot}/main.js",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}\\node_modules\\.bin\\electron.cmd",
+            "runtimeArgs": [],
+            "outFiles": [
+                "${workspaceRoot}/built/**/*.js"
+            ],
+            "sourceMaps": true,
+            "preLaunchTask": "rebuild"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "MOCHA",
+            "program": "${workspaceRoot}/built/tests.js",
+            "cwd": "${workspaceRoot}",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/mocha.cmd",
+                "runtimeArgs": []
+            },
+            "outFiles": [
+                "${workspaceRoot}/built/**/*.js"
+            ],
+            "sourceMaps": true,
+            "preLaunchTask": "rebuild"
+        },
+        {
+            "name": "Electron Renderer",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
+            "runtimeArgs": [
+                // "http://localhost:4000",
+                "${workspaceRoot}/main.js",
+                "--remote-debugging-port=9222"
+            ],
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "preLaunchTask": "rebuild"
+        },
+        {
+            "name": "Chrome",
+            "runtimeExecutable": "${workspaceRoot}/.vscode/chrome.cmd",
+            "runtimeArgs": [
+
+            ],
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+            // "preLaunchTask": "rebundle"
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "SERVER",
+            "program": "${workspaceRoot}/_server/index.js",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "build:server", 
+            "outFiles": [
+                "${workspaceRoot}/_server/**/*.js"
+            ],
+            "sourceMaps": true
+        }
+    ]
+}

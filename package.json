@@ -1,0 +1,46 @@
+{
+  "name": "empty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "npm link webpack && npm link typescript && npm link electron && npm link lite-server && npm link rimraf && npm link ts-loader && npm link mocha",
+    "test": "mocha built/tests.js",
+    "build": "tsc -p .",
+    "clean": "rimraf ./built",
+    "rebuild": "npm run clean && npm run build",
+    "bundle": "webpack",
+    "rebundle": "npm run clean && webpack",
+    "dev": "lite-server",
+    "build:server": "rimraf ./_server && tsc -p ./tsconfig.server.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.0",
+    "@types/electron": "^1.4.30",
+    "@types/express": "^4.0.35",
+    "@types/material-ui": "^0.16.47",
+    "@types/mocha": "^2.2.34",
+    "@types/node": "^6.0.60",
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
+    "@types/react-tap-event-plugin": "0.0.30",
+    "@types/tedious": "^1.8.28",
+    "@types/whatwg-fetch": "0.0.33"
+  },
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "material-ui": "^0.16.7",
+    "mobx": "^2.7.0",
+    "mobx-react": "^4.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "rxjs": "^5.0.2",
+    "tedious": "^1.14.0",
+    "whatwg-fetch": "^2.0.2"
+  }
+}
