@@ -14,7 +14,7 @@
     "dev": "lite-server",
     "build:server": "rimraf ./_server && tsc -p ./tsconfig.server.json"
   },
-  "keywords": ["react","mobx","material-ui","rxjs", "tedious", "sqlserver" ,"node" , "electron"],
+  "keywords": ["react","mobx","material-ui","rxjs", "tedious", "sqlserver" ,"node" , "electron", "Typescript"],
   "author": "D10221",
   "license": "ISC",
   "devDependencies": {
