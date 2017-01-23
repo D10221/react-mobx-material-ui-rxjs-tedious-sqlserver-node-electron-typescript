@@ -1,3 +1,6 @@
+/**
+ * see: http://stackoverflow.com/questions/41149648/using-material-ui-muithemeable-in-typescript/41196634?noredirect=1#comment70768776_41196634
+ */
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as injectTapEventPlugin from "react-tap-event-plugin";
